@@ -1,0 +1,331 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+{% include 'include/navbar.html' %}
+
+    <section id="page-billboard">
+      <div class="container padding-medium-2">
+        <div class="page-billboard-container text-center">
+          <h1 class="text-capitalize lh-1 mb-3">Contact Us</h1>
+          <span class="item"><a href="{% url 'index' %}">Home</a></span> &nbsp; /
+          &nbsp; <span class="item">Contact Us</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-us-wrap py-5 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="contact-info col-md-6">
+            <h2 class="fs-3 text-uppercase mb-4">Contact information</h2>
+            <p>
+              Tortor dignissim convallis aenean et tortor at risus viverra
+              adipiscing.
+            </p>
+            <div class="page-content">
+              <div class="col-md-6">
+                <div class="content-box my-5">
+                  <h5 class="element-title text-uppercase fs-6 fw-bold">
+                    Programming Department
+                  </h5>
+                  <div class="contact-address">
+                    <p>Rukatech Computer College, Ogun State, NG</p>
+                  </div>
+                  <div class="contact-number">
+                    <a href="#">+123 456 789 ,</a>
+                    <a href="#">+123 456 789</a>
+                  </div>
+                  <div class="email-address">
+                    <p>
+                      <a href="#">info@rukatechcollege.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-box my-5">
+                  <h5 class="element-title text-uppercase fs-6 fw-bold">
+                    Web-Dev Department
+                  </h5>
+                  <div class="contact-address">
+                    <p>Rukatech Computer College, Ogun State, NG</p>
+                  </div>
+                  <div class="contact-number">
+                    <a href="#">+123 456 789 ,</a>
+                    <a href="#">+123 456 789</a>
+                  </div>
+                  <div class="email-address">
+                    <p>
+                      <a href="#">info@rukatechcollege.com</a>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="content-box my-5">
+                  <h5 class="element-title text-uppercase fs-6 fw-bold">
+                    Social info
+                  </h5>
+                  <div class="social-links">
+                    <ul class="list-unstyled d-flex gap-3 mt3">
+                      <li>
+                        <a href="#" class="text-secondary me-3 p-0">
+                          <iconify-icon
+                            icon="ri:facebook-fill"
+                            class="social-icon"
+                          ></iconify-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-secondary me-3 p-0">
+                          <iconify-icon
+                            icon="ri:instagram-line"
+                            class="social-icon"
+                          ></iconify-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-secondary me-3 p-0">
+                          <iconify-icon
+                            icon="ri:twitter-fill"
+                            class="social-icon"
+                          ></iconify-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-secondary me-3 p-0">
+                          <iconify-icon
+                            icon="ri:youtube-fill"
+                            class="social-icon"
+                          ></iconify-icon>
+                        </a>
+                      </li>
+                      <li>
+                        <a href="#" class="text-secondary me-3 p-0">
+                          <iconify-icon
+                            icon="ri:linkedin-fill"
+                            class="social-icon"
+                          ></iconify-icon>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="inquiry-item col-md-6">
+            <h2 class="fs-3 text-uppercase mb-4">Got any questions?</h2>
+            <p>Use the form below to get in touch with us.</p>
+            <form
+              name="contactform"
+              action="contact.php"
+              method="post"
+              class="form-group contact-form mt-4"
+            >
+              <div
+                class="form-input col-lg-12 d-flex justify-content-between mb-3"
+              >
+                <div class="w-100 me-3">
+                  <label class="mb-2 fs-6 text-dark">Your Name*</label>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Write Your Name Here"
+                    class="form-control shadow-none px-3 py-2"
+                    required=""
+                  />
+                </div>
+                <div class="w-100">
+                  <label class="mb-2 fs-6 text-dark">Your E-mail*</label>
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Write Your Email Here"
+                    class="form-control shadow-none px-3 py-2"
+                    required=""
+                  />
+                </div>
+              </div>
+              <div class="col-lg-12 mb-3">
+                <label class="mb-2 fs-6 text-dark">Phone Number</label>
+                <input
+                  type="number"
+                  name="phone"
+                  placeholder="Phone Number"
+                  class="form-control shadow-none px-3 py-2"
+                />
+              </div>
+              <div class="col-lg-12 mb-3">
+                <label class="mb-2 fs-6 text-dark">Subject</label>
+
+                <input
+                  type="text"
+                  name="subject"
+                  placeholder="Write Your Subject Here"
+                  class="form-control shadow-none px-3 py-2"
+                />
+              </div>
+              <div class="col-lg-12 mb-3">
+                <label class="mb-2 fs-6 text-dark">Your Message*</label>
+
+                <textarea
+                  name="message"
+                  placeholder="Write Your Message Here"
+                  class="form-control shadow-none px-3 py-2"
+                  style="height: 150px"
+                  required=""
+                ></textarea>
+              </div>
+              <div class="d-grid">
+                <button
+                  type="submit"
+                  name="submit"
+                  class="btn btn-arrow btn-primary btn-lg btn-dark fs-6"
+                >
+                  Submit
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-list mb-5 pb-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 border-end">
+            <div class="content-box ps-3 my-4">
+              <h5 class="element-title text-uppercase">FRONT-END DEV</h5>
+              <div class="contact-address">
+                <p>Emmanuel</p>
+              </div>
+              <div class="contact-number">
+                <p>
+                  <a href="#">+234 81 333 786 763</a>
+                </p>
+              </div>
+              <div class="email-address">
+                <p>
+                  <a href="#">eonsyntax@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 border-end">
+            <div class="content-box ps-3 my-4">
+              <h5 class="element-title text-uppercase">BACK-END DEV1</h5>
+              <div class="contact-address">
+                <p>Student A</p>
+              </div>
+              <div class="contact-number">
+                <p>
+                  <a href="#">+123 456 786</a>
+                </p>
+              </div>
+              <div class="email-address">
+                <p>
+                  <a href="#">abcdef@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="content-box ps-3 my-4">
+              <h5 class="element-title text-uppercase">BACK-END DEV2</h5>
+              <div class="contact-address">
+                <p>Student B</p>
+              </div>
+              <div class="contact-number">
+                <p>
+                  <a href="#">+123 456 789</a>
+                </p>
+              </div>
+              <div class="email-address">
+                <p>
+                  <a href="#">abcdef@gmail.com</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="google-map">
+      <div class="mapouter">
+        <div class="gmap_canvas">
+          <iframe
+            width="100%"
+            height="500"
+            id="gmap_canvas"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3131.1649437834167!2d3.867448473731838!3d6.809738219773469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103967001f5d2721%3A0x145588e05607570c!2sRukatech%20Computer%20College!5e1!3m2!1sen!2sng!4v1722042716833!5m2!1sen!2sng"
+            frameborder="0"
+            scrolling="no"
+            marginheight="0"
+            marginwidth="0"
+          ></iframe
+          ><a href="https://getasearch.com/fmovies"></a><br />
+          <style>
+            .mapouter {
+              position: relative;
+              text-align: right;
+              height: 500px;
+              width: 100%;
+            }</style
+          ><a href="https://www.embedgooglemap.net">embedgooglemap.net</a>
+          <style>
+            .gmap_canvas {
+              overflow: hidden;
+              background: none !important;
+              height: 500px;
+              width: 100%;
+            }
+          </style>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section
+      id="start"
+      class="padding-medium"
+      style="
+        background: url(images/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 360px;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 order-md-1 d-flex">
+            <h3
+              class="text-capitalize text-white display-4 fw-semibold lh-1 mb-3"
+            >
+              Let’s simply begin the search.
+            </h3>
+          </div>
+          <div class="col-md-7 order-md-2">
+            <div class="text-content ps-md-5 mt-4 mt-md-0">
+              <p class="text-white py-lg-2">
+                Neque, vestibulum sed varius magna et at. Eu, adipiscing morbi
+                augue justo. Nibh laoreet volutpat quis velit. Blandit aliquam
+                donec sed morbi congue eget lorem viverra porta id lobortis.
+              </p>
+              <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'include/footer.html' %}
+    
+{% endblock %}

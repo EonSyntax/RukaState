@@ -1,0 +1,603 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+
+{% include 'include/navbar.html' %}
+
+    <section id="page-billboard">
+      <div class="container padding-medium-2">
+        <div class="page-billboard-container text-center">
+          <h1 class="text-capitalize lh-1 mb-3">About Us</h1>
+          <span class="item"><a href="{% url 'index' %}">Home</a></span> &nbsp; /
+          &nbsp; <span class="item">About Us</span>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="single-image col-md-12">
+            <h2 class="mb-3">Who we are ?</h2>
+            <p>
+              At Rukatech Computer College, our journey began with a shared
+              passion for web development and a drive to create meaningful
+              digital solutions. What started as a learning project among a
+              group of dedicated students quickly grew into a full-fledged
+              vision. Motivated by real-world challenges in the real estate
+              industry, we set out to build a platform that simplifies property
+              buying, selling, and renting — all through a modern, user-friendly
+              interface.
+            </p>
+            <p>
+              Fueled by curiosity, teamwork, and the skills we gained through
+              our courses, we developed a full-stack real estate website that
+              connects clients with properties seamlessly. Our platform
+              showcases the power of web technologies while reflecting our
+              commitment to innovation and quality. This project is not just a
+              website — it’s a testament to what passion, collaboration, and
+              continuous learning can achieve.
+            </p>
+          </div>
+        </div>
+        <div class="row mt-4">
+          <div class="col">
+            <img
+              class="abt-img img-fluid rounded-4"
+              src="{% static 'images/item7.jpg' %}" 
+              alt="About us"
+            />
+          </div>
+          <div class="col">
+            <img
+              class="abt-img img-fluid rounded-4"
+              src="{% static 'images/item8.jpg' %}"
+              alt="About us"
+            />
+          </div>
+          <div class="col">
+            <img
+              class="abt-img img-fluid rounded-4"
+              src="{% static 'images/item9.jpg' %}"
+              alt="About us"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-12 mt-5">
+            <h2 class="mt-5 mb-3">Our Team</h2>
+            <section>
+              <div class="container padding-medium pt-0">
+                <div class="row align-items-center">
+                  <div class="col-md-4 mt-5">
+                    <img
+                      src="{% static 'images/team6.jpg' %}"
+                      class="img-fluid rounded-4"
+                      alt="image"
+                    />
+                    <h5 class="element-title text-uppercase mt-4">
+                      Emmanuel Adebanji
+                    </h5>
+                    <h6 class="heading-color mb-4">Front-End Developer</h6>
+                    <p>
+                      Contact: <i class="icon icon-phone"></i>+234 813 378 6763
+                    </p>
+                    <p>
+                      Email: <i class="icon icon-envelope-o"></i
+                      ><a href="mailto:eonsyntax@gmail.com"
+                        >info@emmanueladebanji.com</a
+                      >
+                    </p>
+                    <div class="social-links">
+                      <ul class="list-unstyled d-flex gap-3 mt3">
+                        <li>
+                          <p>Socials:</p>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:facebook-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:instagram-line"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:twitter-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:youtube-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:linkedin-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4 mt-5">
+                    <img
+                      src="{% static 'images/team6.jpg' %}"
+                      class="img-fluid rounded-4"
+                      alt="image"
+                    />
+                    <h5 class="element-title text-uppercase mt-4">
+                      DEV DAMOLA
+                    </h5>
+                    <h6 class="heading-color mb-4">Sales Excutive</h6>
+                    <p>
+                      Contact: <i class="icon icon-phone"></i>+1650-243-0000
+                    </p>
+                    <p>
+                      Email: <i class="icon icon-envelope-o"></i
+                      ><a href="mailto:info@yourcompany.com"
+                        >info@yourcompany.com</a
+                      >
+                    </p>
+                    <div class="social-links">
+                      <ul class="list-unstyled d-flex gap-3 mt3">
+                        <li>
+                          <p>Socials:</p>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:facebook-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:instagram-line"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:twitter-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:youtube-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:linkedin-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-md-4 mt-5">
+                    <img
+                      src="{% static 'images/team6.jpg' %}"
+                      class="img-fluid rounded-4"
+                      alt="image"
+                    />
+                    <h5 class="element-title text-uppercase mt-4">
+                      DEV MARTINS
+                    </h5>
+                    <h6 class="heading-color mb-4">Real estate broker</h6>
+                    <p>
+                      Contact: <i class="icon icon-phone"></i>+1650-243-0000
+                    </p>
+                    <p>
+                      Email: <i class="icon icon-envelope-o"></i
+                      ><a href="mailto:info@yourcompany.com"
+                        >info@yourcompany.com</a
+                      >
+                    </p>
+                    <div class="social-links">
+                      <ul class="list-unstyled d-flex gap-3 mt3">
+                        <li>
+                          <p>Socials:</p>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:facebook-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:instagram-line"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:twitter-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:youtube-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="#" class="text-secondary me-2 p-0">
+                            <iconify-icon
+                              icon="ri:linkedin-fill"
+                              class="social-icon"
+                            ></iconify-icon>
+                          </a>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="about-us" class="padding-medium">
+      <div class="container">
+        <div class="row">
+          <div class="text-center col-lg-4">
+            <i class="bi bi-search text-primary display-2"></i>
+            <h3 class="my-3">Easy to find</h3>
+            <p>Urna, massa aliqua dui pellentesque.</p>
+          </div>
+          <div class="text-center col-lg-4">
+            <i class="bi bi-tags text-primary display-2"></i>
+            <h3 class="my-3">Affordable Prices</h3>
+            <p>Acgravida in diam vitae nec mattis.</p>
+          </div>
+          <div class="text-center col-lg-4">
+            <i class="bi bi-stopwatch text-primary display-2"></i>
+            <h3 class="my-3">Quickly Process</h3>
+            <p>Nec mattis lectus quam pretium amet.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="help" class="padding-medium">
+      <div class="container-fluid px-md-5">
+        <div class="row d-flex justify-content-between align-items-center">
+          <div class="col-md-6">
+            <div class="image-holder d-flex">
+              <img
+                src="{% static 'images/group.png' %}"
+                class="img-fluid"
+                alt="Bootstrap Themes"
+                loading="lazy"
+              />
+            </div>
+          </div>
+
+          <div class="col-md-6">
+            <div class="text-content ps-md-5 mt-4 mt-md-0">
+              <h2 class="text-capitalize">We help people to find homes</h2>
+              <p>
+                Mauris orci donec blandit maecenas. Orci lorem purus porttitor
+                massa consectetur. Neque, vestibulum sed varius magna et at. Eu,
+                adipiscing morbi augue justo. Nibh laoreet volutpat quis velit.
+                Blandit aliquam donec sed morbi congue eget lorem viverra porta
+                id lobortis.
+              </p>
+              <ul class="list-unstyled">
+                <li>
+                  ✓ Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem
+                  vero maiores assumenda!
+                </li>
+                <li>
+                  ✓ Odit similique voluptas excepturi doloribus eius aliquid
+                  neque, aut illo blanditiis.
+                </li>
+                <li>
+                  ✓ Quae iusto excepturi quasi ipsum, non ab iure error nam
+                  pariatur distinctio temporibus.
+                </li>
+                <li>
+                  ✓ Odit similique voluptas excepturi doloribus eius aliquid
+                  neque, aut illo blanditiis.
+                </li>
+                <li>
+                  ✓ Quae iusto excepturi quasi ipsum, non ab iure error nam
+                  pariatur distinctio temporibus.
+                </li>
+              </ul>
+              <a href="{% url 'contact' %}" class="btn btn-primary btn-lg mt-4"
+                >Get In Touch</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial Section-->
+    <section id="testimonial">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8">
+            <div
+              class="swiper testimonial-swiper swiper-initialized swiper-horizontal swiper-free-mode swiper-backface-hidden"
+            >
+              <div
+                class="swiper-wrapper"
+                id="swiper-wrapper-ab2a2c973612cb22"
+                aria-live="polite"
+              >
+                <div
+                  class="swiper-slide swiper-slide-active"
+                  role="group"
+                  aria-label="1 / 3"
+                  style="width: 856px; margin-right: 30px"
+                >
+                  <svg class="text-primary" width="120" height="120">
+                    <use xlink:href="#quote"></use>
+                  </svg>
+                  <p class="testimonial-p mt-2">
+                    Massa semper non rutrum orci facilisi sit. Lectus porta quam
+                    a fringilla eget viverra sem. Vulputate massa hendrerit
+                    turpis gravida tempor, porttitor.
+                  </p>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p class="fw-semibold pt-3 mb-1">Elena Pravo</p>
+                      <p class="text-primary opacity-75">Ceo, Upstate</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide swiper-slide-next"
+                  role="group"
+                  aria-label="2 / 3"
+                  style="width: 856px; margin-right: 30px"
+                >
+                  <svg class="text-primary" width="120" height="120">
+                    <use xlink:href="#quote"></use>
+                  </svg>
+                  <p class="testimonial-p mt-2">
+                    Massa semper non rutrum orci facilisi sit. Lectus porta quam
+                    a fringilla eget viverra sem. Vulputate massa hendrerit
+                    turpis gravida tempor, porttitor.
+                  </p>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p class="fw-semibold pt-3 mb-1">Elena Pravo</p>
+                      <p class="text-primary opacity-75">Ceo, Upstate</p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="swiper-slide"
+                  role="group"
+                  aria-label="3 / 3"
+                  style="width: 856px; margin-right: 30px"
+                >
+                  <svg class="text-primary" width="120" height="120">
+                    <use xlink:href="#quote"></use>
+                  </svg>
+                  <p class="testimonial-p mt-2">
+                    Massa semper non rutrum orci facilisi sit. Lectus porta quam
+                    a fringilla eget viverra sem. Vulputate massa hendrerit
+                    turpis gravida tempor, porttitor.
+                  </p>
+                  <div class="row">
+                    <div class="col-md-8">
+                      <p class="fw-semibold pt-3 mb-1">Elena Pravo</p>
+                      <p class="text-primary opacity-75">Ceo, Upstate</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="testimonial-swiper-button col-md-3 position-absolute">
+                <div
+                  class="swiper-button-prev testimonial-arrow swiper-button-disabled"
+                  tabindex="-1"
+                  role="button"
+                  aria-label="Previous slide"
+                  aria-controls="swiper-wrapper-ab2a2c973612cb22"
+                  aria-disabled="true"
+                ></div>
+                <div class="arrow-divider">|</div>
+                <div
+                  class="swiper-button-next testimonial-arrow"
+                  tabindex="0"
+                  role="button"
+                  aria-label="Next slide"
+                  aria-controls="swiper-wrapper-ab2a2c973612cb22"
+                  aria-disabled="false"
+                ></div>
+              </div>
+
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Post Section-->
+    <section id="post" class="padding-medium">
+      <div class="container-fluid px-md-5">
+        <div
+          class="section-header d-flex align-items-center justify-content-between mb-5"
+        >
+          <h2 class="section-title">Related Posts</h2>
+          <a href="{% url 'blog' %}" class="btn btn-primary btn-lg px-4 me-md-2"
+            >Read More</a
+          >
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <article class="post-item pb-5">
+              <div class="post-image">
+                <a href="{% url 'blog_details' %}"
+                  ><img
+                    src="{% static 'images/item-large3.jpg' %}" 
+                    class="img-fluid rounded-4"
+                /></a>
+              </div>
+              <div class="post-content">
+                <a href="#" class="text-decoration-none">
+                  <p class="blog-topic text-uppercase mt-3">
+                    Rent / 12 jan, 2022
+                  </p>
+                </a>
+                <a href="{% url 'blog_details' %}" class="text-decoration-none">
+                  <h4 class="blog-title my-3">
+                    Modern vibes house, todays trending design
+                  </h4>
+                </a>
+                <p>
+                  Dignissim lacus, turpis ut suspendisse vel tellus. Turpis
+                  purus, gravida orci, fringilla...
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="post-item pb-5">
+              <div class="post-image">
+                <a href="{% url 'blog_details' %}"
+                  ><img
+                    src="{% static 'images/item-large6.jpg' %}" 
+                    class="img-fluid rounded-4"
+                /></a>
+              </div>
+              <div class="post-content">
+                <a href="#" class="text-decoration-none">
+                  <p class="blog-topic text-uppercase mt-3">
+                    Rent / 12 jan, 2022
+                  </p>
+                </a>
+                <a href="{% url 'blog_details' %}" class="text-decoration-none">
+                  <h4 class="blog-title my-3">
+                    Modern vibes house, todays trending design
+                  </h4>
+                </a>
+                <p>
+                  Dignissim lacus, turpis ut suspendisse vel tellus. Turpis
+                  purus, gravida orci, fringilla...
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-4">
+            <article class="post-item pb-5">
+              <div class="post-image">
+                <a href="{% url 'blog_details' %}"
+                  ><img
+                    src="{% static 'images/item-large8.jpg' %}"
+                    class="img-fluid rounded-4"
+                /></a>
+              </div>
+              <div class="post-content">
+                <a href="#" class="text-decoration-none">
+                  <p class="blog-topic text-uppercase mt-3">
+                    Rent / 12 jan, 2022
+                  </p>
+                </a>
+                <a href="{% url 'blog_details' %}" class="text-decoration-none">
+                  <h4 class="blog-title my-3">
+                    Modern vibes house, todays trending design
+                  </h4>
+                </a>
+                <p>
+                  Dignissim lacus, turpis ut suspendisse vel tellus. Turpis
+                  purus, gravida orci, fringilla...
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="start"
+      class="padding-medium"
+      style="
+        background: url(images/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 360px;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 order-md-1 d-flex">
+            <h3
+              class="text-capitalize text-white display-4 fw-semibold lh-1 mb-3"
+            >
+              Let’s simply begin the search.
+            </h3>
+          </div>
+          <div class="col-md-7 order-md-2">
+            <div class="text-content ps-md-5 mt-4 mt-md-0">
+              <p class="text-white py-lg-2">
+                Neque, vestibulum sed varius magna et at. Eu, adipiscing morbi
+                augue justo. Nibh laoreet volutpat quis velit. Blandit aliquam
+                donec sed morbi congue eget lorem viverra porta id lobortis.
+              </p>
+              <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-md-2"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'include/footer.html' %}
+
+{% endblock %}

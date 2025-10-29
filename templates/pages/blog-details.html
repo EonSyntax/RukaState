@@ -1,0 +1,706 @@
+{% extends 'base.html' %}
+{% block content %}
+{% load static %}
+
+    <!-- nav bar start  -->
+    <nav
+      id="header"
+      class="navbar navbar-expand-lg bg-dark fixed-top py-4 px-2 p-md-4"
+    >
+      <div class="container-fluid">
+        <a class="brandlogo" href="./index.html">RUKASTATE</a>
+
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbar2"
+          aria-controls="offcanvasNavbar2"
+          aria-label="Toggle navigation"
+        >
+          <ion-icon name="menu-outline" style="font-size: 30px"></ion-icon>
+        </button>
+
+        <div
+          class="offcanvas offcanvas-end"
+          tabindex="-1"
+          id="offcanvasNavbar2"
+          aria-labelledby="offcanvasNavbar2Label"
+        >
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="offcanvasNavbar2Label">Menu</h5>
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul
+              class="navbar-nav align-items-center justify-content-end align-items-center flex-grow-1"
+            >
+              <li class="nav-item">
+                <a class="nav-link active me-md-4" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="About.html">About</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link me-md-4 text-center dropdown-toggle"
+                  data-bs-toggle="dropdown"
+                  href="#"
+                  role="button"
+                  aria-expanded="false"
+                  >Properties</a
+                >
+                <ul class="dropdown-menu dropdown-menu-dark">
+                  <li>
+                    <a href="properties.html" class="dropdown-item"
+                      >Apartments
+                    </a>
+                  </li>
+                  <li>
+                    <a href="properties.html" class="dropdown-item">Flats </a>
+                  </li>
+                  <li>
+                    <a href="properties.html" class="dropdown-item">Villa </a>
+                  </li>
+                  <li>
+                    <a href="properties.html" class="dropdown-item">Office </a>
+                  </li>
+                  <li>
+                    <a href="properties.html" class="dropdown-item"
+                      >Bungalow
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="contact.html">Contact</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link me-md-4" href="blog.html">Blog</a>
+              </li>
+
+              <li class="nav-item">
+                <a
+                  class="nav-link me-md-4"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                  >Login</a
+                >
+              </li>
+
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing mt-4">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab"
+                            role="tablist"
+                          >
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-3 active"
+                              id="nav-sign-in-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in"
+                              aria-selected="true"
+                            >
+                              Log In
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase"
+                              id="nav-register-tab"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register"
+                              aria-selected="false"
+                            >
+                              Sign Up
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent">
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-sign-in"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab"
+                          >
+                            <form id="form1" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail1"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail1"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword1"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword1"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                                <div
+                                  id="passwordHelpBlock"
+                                  class="form-text text-center"
+                                >
+                                  <a href="#" class="password"
+                                    >Forgot Password ?</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >Remember Me</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Log In
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade"
+                            id="nav-register"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab"
+                          >
+                            <form id="form2" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail2"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail2"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword2"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword2"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >I agree to the
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >Privacy Policy</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Sign Up
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <li class="nav-item">
+                <a
+                  class="btn-medium btn btn-primary"
+                  href="#"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                  >Sign Up</a
+                >
+              </li>
+              <!-- Modal -->
+              <div
+                class="modal fade"
+                id="exampleModal2"
+                tabindex="-1"
+                aria-labelledby="exampleModalLabel"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <button
+                        type="button"
+                        class="btn-close"
+                        data-bs-dismiss="modal"
+                        aria-label="Close"
+                      ></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="tabs-listing mt-4">
+                        <nav>
+                          <div
+                            class="nav nav-tabs d-flex justify-content-center border-0"
+                            id="nav-tab2"
+                            role="tablist"
+                          >
+                            <button
+                              class="btn btn-outline-primary text-uppercase me-4"
+                              id="nav-sign-in-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-sign-in2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-sign-in2"
+                              aria-selected="false"
+                            >
+                              Log In
+                            </button>
+                            <button
+                              class="btn btn-outline-primary text-uppercase active"
+                              id="nav-register-tab2"
+                              data-bs-toggle="tab"
+                              data-bs-target="#nav-register2"
+                              type="button"
+                              role="tab"
+                              aria-controls="nav-register2"
+                              aria-selected="true"
+                            >
+                              Sign Up
+                            </button>
+                          </div>
+                        </nav>
+                        <div class="tab-content" id="nav-tabContent1">
+                          <div
+                            class="tab-pane fade"
+                            id="nav-sign-in2"
+                            role="tabpanel"
+                            aria-labelledby="nav-sign-in-tab2"
+                          >
+                            <form id="form3" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail3"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword3"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword3"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                                <div
+                                  id="passwordHelpBlock2"
+                                  class="form-text text-center"
+                                >
+                                  <a href="#" class="password"
+                                    >Forgot Password ?</a
+                                  >
+                                </div>
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >Remember Me</span
+                                >
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Log In
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                          <div
+                            class="tab-pane fade active show"
+                            id="nav-register2"
+                            role="tabpanel"
+                            aria-labelledby="nav-register-tab2"
+                          >
+                            <form id="form4" class="form-group flex-wrap p-3">
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="exampleInputEmail4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Email Address</label
+                                >
+                                <input
+                                  type="text"
+                                  id="exampleInputEmail4"
+                                  name="email"
+                                  placeholder="Email"
+                                  class="form-control ps-3"
+                                />
+                              </div>
+                              <div class="form-input col-lg-12 my-4">
+                                <label
+                                  for="inputPassword4"
+                                  class="form-label fs-6 text-uppercase fw-bold text-black"
+                                  >Password</label
+                                >
+                                <input
+                                  type="password"
+                                  id="inputPassword4"
+                                  placeholder="Password"
+                                  class="form-control ps-3"
+                                  aria-describedby="passwordHelpBlock"
+                                />
+                              </div>
+                              <label class="py-3">
+                                <input
+                                  type="checkbox"
+                                  required=""
+                                  class="d-inline"
+                                />
+                                <span class="label-body text-black"
+                                  >I agree to the
+                                  <a
+                                    href="#"
+                                    class="text-black password border-bottom"
+                                    >Privacy Policy</a
+                                  >
+                                </span>
+                              </label>
+                              <div class="d-grid my-3">
+                                <button
+                                  class="btn btn-primary btn-lg btn-dark text-uppercase btn-rounded-none fs-6"
+                                >
+                                  Sign Up
+                                </button>
+                              </div>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <section id="page-billboard">
+      <div class="container padding-medium-2">
+        <div class="page-billboard-container text-center">
+          <h1 class="text-capitalize lh-1 mb-3">
+            How to make your villa look outstanding?
+          </h1>
+          <span class="item"><a href="index.html">Home</a></span> &nbsp; /
+          &nbsp; <span class="item">Blog-Details</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="padding-medium pt-0">
+      <div class="container">
+        <div class="row">
+          <div class="">
+            <div class="post-content">
+              <img src="{% static 'images/blog-large.jpg' %}" alt="image" class="img-fluid" />
+              <p class="mt-5">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eisusmod tempor incidunt ut elit et.Lorem ipsum dolor sit amet
+                consectetur adipisicing elit sed do eisusmod tempor incidunt ut
+                elit et.
+              </p>
+              <blockquote>
+                This is blockquote consectetur adipisicing elit sed do eisusmod
+                tempor incidunt ut elit et.
+              </blockquote>
+
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit sed do
+                eisusmod tempor incidunt ut elit et.Lorem ipsum dolor sit amet
+                consectetur adipisicing elit sed do eisusmod tempor incidunt ut
+                elit et.
+              </p>
+
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+                eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+                enim ad minim veniam, quis nostrud exercitation ullamco laboris
+                nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
+                in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+                nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                sunt in culpa qui officia eserunt mollit anim id est laborum.
+              </p>
+
+              <blockquote>
+                “Sit suscipit tortor turpis sed fringilla lectus facilisis amet.
+                Ipsum, amet dolor curabitur non aliquet orci urna volutpat. Id
+                aliquam neque, ut vivamus sit imperdiet enim, lacus, vel.
+              </blockquote>
+
+              <h4 class="mt-5">Consectetur Facilisis Vivamus</h4>
+              <p>
+                Morbi arcu amet, nulla fermentum vitae mattis arcu mi convallis.
+                Urna in sollicitudin in vestibulum erat. Turpis faucibus augue
+                ipsum, at aliquam. Cras sagittis tellus nunc integer vitae neque
+                bibendum eget. Tempus malesuada et pellentesque maecenas. Sociis
+                porttitor elit tincidunt tellus sit ornare. Purus ut ipsum, enim
+                lacus. Praesent imperdiet vitae eu, eu tincidunt nunc integer
+                sit.
+              </p>
+              <p>
+                Tortor diam dignissim amet, in interdum aliquet. Magnis dictum
+                et eros purus fermentum, massa ullamcorper sit sollicitudin.
+                Nascetur libero elementum adipiscing mauris maecenas et magna.
+                Etiam nec, rutrum a diam lacus, nunc integer etiam. Mattis
+                pulvinar non viverra donec pellentesque. Odio mi consequat
+                libero dolor. Porta ut diam lobortis eget leo, lectus. Nunc
+                tempus feugiat massa laoreet ultrices diam magna quam. Congue
+                auctor auctor luctus neque. Enim lorem ultrices diam donec. Sed
+                id placerat consectetur faucibus.
+              </p>
+            </div>
+            <!--post-content-->
+
+            <section class="comments-wrap mb-4 col-lg-10 offset-lg-1 pt-5 my-5">
+              <h2>Comments</h2>
+              <div class="comment-list mt-5">
+                <article class="flex-container d-flex mb-3">
+                  <img
+                    src="{% static 'images/commentor-item1.jpg' %}"
+                    alt="default"
+                    class="commentorImg"
+                  />
+                  <div class="author-post">
+                    <div class="comment-meta d-flex align-items-center gap-3">
+                      <h4>Michael Watson</h4>
+                      <span class="meta-date">Dec 2,2020</span>
+                      <small class="comments-reply"
+                        ><a href="#">↰ Reply</a></small
+                      >
+                    </div>
+                    <!--meta-tags-->
+
+                    <p>
+                      Tristique tempis condimentum diam done ullancomroer sit
+                      element henddg sit he consequert.Tristique tempis
+                      condimentum diam done ullancomroer sit element henddg sit
+                      he consequert.
+                    </p>
+                  </div>
+                </article>
+                <!--flex-container-->
+
+                <div class="child-comments">
+                  <article class="flex-container d-flex">
+                    <img
+                      src="{% static 'images/commentor-item2.jpg' %}"
+                      alt="sara"
+                      class="commentorImg"
+                    />
+                    <div class="author-post">
+                      <div class="comment-meta d-flex align-items-center gap-3">
+                        <h4>Chris Gyale</h4>
+                        <span class="meta-date">Dec 3,2020</span>
+                        <small class="comments-reply"
+                          ><a href="#">↰ Reply</a></small
+                        >
+                      </div>
+                      <!--meta-tags-->
+
+                      <p>
+                        Lorem diam done ullancomroer sit element henddg sit he
+                        consequert.Tristique tempis condimentum diam done
+                        ullancomroer sit element henddg sit he consequert.
+                      </p>
+                    </div>
+                  </article>
+                  <!--flex-container-->
+                </div>
+                <!--child-comments-->
+              </div>
+              <!--comment-list-->
+            </section>
+
+            <section class="comment-respond mb-5 col-lg-10 offset-lg-1 my-5">
+              <h3>Leave a Comment</h3>
+              <form method="post" class="form-group mt-3">
+                <div class="row">
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      type="text"
+                      name="author"
+                      id="author"
+                      placeholder="Your full name"
+                    />
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      class="form-control"
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="E-mail Address"
+                    />
+                  </div>
+                </div>
+
+                <div class="row mt-4 d-grid gap-3">
+                  <div class="col-md-12">
+                    <textarea
+                      class="form-control"
+                      id="comment"
+                      name="comment"
+                      placeholder="Write your comment here"
+                      rows="4"
+                    ></textarea>
+                  </div>
+                  <div class="col-md-12">
+                    <label class="example-send-yourself-copy">
+                      <input type="checkbox" />
+                      <span class="label-body"
+                        >Save my name, email, and website in this browser for
+                        the next time I comment.</span
+                      >
+                    </label>
+                  </div>
+                  <div class="col-md-12">
+                    <div class="d-grid my-4">
+                      <input
+                        class="btn btn-primary btn-lg"
+                        type="submit"
+                        value="Submit "
+                      />
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      id="start"
+      class="padding-medium"
+      style="
+        background: url(images/background.jpg);
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 360px;
+      "
+    >
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-5 order-md-1 d-flex">
+            <h3
+              class="text-capitalize text-white display-4 fw-semibold lh-1 mb-3"
+            >
+              Let’s simply begin the search.
+            </h3>
+          </div>
+          <div class="col-md-7 order-md-2">
+            <div class="text-content ps-md-5 mt-4 mt-md-0">
+              <p class="text-white py-lg-2">
+                Neque, vestibulum sed varius magna et at. Eu, adipiscing morbi
+                augue justo. Nibh laoreet volutpat quis velit. Blandit aliquam
+                donec sed morbi congue eget lorem viverra porta id lobortis.
+              </p>
+              <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2"
+                >Get Started</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {% include 'include/footer.html' %}
+
+{% endblock %}
