@@ -1,525 +1,534 @@
-{% extends 'base.html' %}
-{% block content %}
-{% load static %}
+{% extends 'base.html' %} {% block content %} {% load static %} {% include
+'include/navbar.html' %}
 
-{% include 'include/navbar.html' %}
+<section id="page-billboard">
+  <div class="container padding-medium-2">
+    <div class="page-billboard-container text-center">
+      <h1 class="text-capitalize lh-1 mb-3">Properties</h1>
+      <span class="item"><a href="{% url 'index' %}">Home</a></span> &nbsp; /
+      &nbsp; <span class="item">Properties</span>
+    </div>
+  </div>
+</section>
 
-    <section id="page-billboard">
-      <div class="container padding-medium-2">
-        <div class="page-billboard-container text-center">
-          <h1 class="text-capitalize lh-1 mb-3">Properties</h1>
-          <span class="item"><a href="{% url 'index' %}">Home</a></span> &nbsp; /
-          &nbsp; <span class="item">Properties</span>
-        </div>
-      </div>
-    </section>
-
-    <main class="main-content">
-      <div class="row align-items-center pb-5 ps-md-5">
-        <div class="col-md-9 d-md-flex">
-          <div class="dropdown mb-3 me-3">
-            <button
-              class="btn btn-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Listing Type
-            </button>
-            <div class="dropdown-menu p-4">
-              <h5 class="text-black mb-3">Listing Style</h5>
-              <div class="checkbox-element">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault1"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault1">
-                    For Sale
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault2"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault2">
-                    For Rent
-                  </label>
-                </div>
-              </div>
-              <hr />
-              <div class="text-start">
-                <button type="button" class="btn btn-primary">Done</button>
-              </div>
+<main class="main-content">
+  <div class="row align-items-center pb-5 ps-md-5">
+    <div class="col-md-9 d-md-flex">
+      <div class="dropdown mb-3 me-3">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Listing Type
+        </button>
+        <div class="dropdown-menu p-4">
+          <h5 class="text-black mb-3">Listing Style</h5>
+          <div class="checkbox-element">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="listingTypeSale"
+              />
+              <label class="form-check-label" for="listingTypeSale">
+                For Sale
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="listingTypeRent"
+              />
+              <label class="form-check-label" for="listingTypeRent">
+                For Rent
+              </label>
             </div>
           </div>
-          <div class="dropdown mb-3 me-3">
-            <button
-              class="btn btn-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Property Type
-            </button>
-            <div class="dropdown-menu p-4">
-              <h5 class="text-black mb-3">Property Type</h5>
-              <div class="checkbox-element">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault1"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault1">
-                    Apartments
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault2"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault2">
-                    Flats
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault3"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault3">
-                    Villa
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault4"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault4">
-                    Office
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="flexCheckDefault5"
-                  />
-                  <label class="form-check-label" for="flexCheckDefault5">
-                    Bungalow
-                  </label>
-                </div>
-              </div>
-              <hr />
-              <div class="text-start">
-                <button type="button" class="btn btn-primary">Done</button>
-              </div>
-            </div>
-          </div>
-          <div class="dropdown mb-3 me-3">
-            <button
-              class="btn btn-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Rooms
-            </button>
-            <div class="dropdown-menu p-3">
-              <div>
-                <h5 class="text-black mb-3 mt-2">Bed Rooms</h5>
-                <div
-                  class="swatch d-flex flex-wrap option-1"
-                  data-option-index="1"
-                >
-                  <div data-value="X" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="any-bedroom"
-                      data-var="x"
-                      type="radio"
-                      name="option-1"
-                      value="X"
-                    />
-                    <label class="swatch-label square-only" for="any-bedroom"
-                      >Any</label
-                    >
-                  </div>
-                  <div data-value="A" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="one-bedroom"
-                      data-var="a"
-                      type="radio"
-                      name="option-1"
-                      value="A"
-                    />
-                    <label class="swatch-label square-only" for="one-bedroom"
-                      >1+</label
-                    >
-                  </div>
-                  <div data-value="B" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="two-bedroom"
-                      data-var="b"
-                      type="radio"
-                      name="option-1"
-                      value="B"
-                    />
-                    <label class="swatch-label square-only" for="two-bedroom"
-                      >2+</label
-                    >
-                  </div>
-                  <div data-value="C" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="three-bedroom"
-                      data-var="c"
-                      type="radio"
-                      name="option-1"
-                      value="C"
-                    />
-                    <label class="swatch-label square-only" for="three-bedroom"
-                      >3+</label
-                    >
-                  </div>
-                  <div data-value="D" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="fourbedroom"
-                      data-var="d"
-                      type="radio"
-                      name="option-1"
-                      value="D"
-                    />
-                    <label class="swatch-label square-only" for="fourbedroom"
-                      >4+</label
-                    >
-                  </div>
-                  <div data-value="E" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="five-bedroom"
-                      data-var="e"
-                      type="radio"
-                      name="option-1"
-                      value="E"
-                    />
-                    <label class="swatch-label square-only" for="five-bedroom"
-                      >5+</label
-                    >
-                  </div>
-                </div>
-              </div>
-              <div class="mt-4">
-                <h5 class="text-black mb-3">Bathrooms</h5>
-                <div
-                  class="swatch d-flex flex-wrap option-2"
-                  data-option-index="1"
-                >
-                  <div data-value="X" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="any-bathroom"
-                      data-var="x"
-                      type="radio"
-                      name="option-2"
-                      value="X"
-                    />
-                    <label class="swatch-label square-only" for="any-bathroom"
-                      >Any</label
-                    >
-                  </div>
-                  <div data-value="A" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="one-bathroom"
-                      data-var="a"
-                      type="radio"
-                      name="option-2"
-                      value="A"
-                    />
-                    <label class="swatch-label square-only" for="one-bathroom"
-                      >1+</label
-                    >
-                  </div>
-                  <div data-value="B" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="two-bathroom"
-                      data-var="b"
-                      type="radio"
-                      name="option-2"
-                      value="B"
-                    />
-                    <label class="swatch-label square-only" for="two-bathroom"
-                      >2+</label
-                    >
-                  </div>
-                  <div data-value="C" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="three-bathroom"
-                      data-var="c"
-                      type="radio"
-                      name="option-2"
-                      value="C"
-                    />
-                    <label class="swatch-label square-only" for="three-bathroom"
-                      >3+</label
-                    >
-                  </div>
-                  <div data-value="D" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="fourbathroom"
-                      data-var="d"
-                      type="radio"
-                      name="option-2"
-                      value="D"
-                    />
-                    <label class="swatch-label square-only" for="fourbathroom"
-                      >4+</label
-                    >
-                  </div>
-                  <div data-value="E" class="swatch-element">
-                    <input
-                      class="swatch-input hide"
-                      id="five-bathroom"
-                      data-var="e"
-                      type="radio"
-                      name="option-1"
-                      value="E"
-                    />
-                    <label class="swatch-label square-only" for="five-bathroom"
-                      >5+</label
-                    >
-                  </div>
-                </div>
-              </div>
-
-              <hr />
-              <div class="text-start">
-                <button type="button" class="btn btn-primary">Done</button>
-              </div>
-            </div>
-          </div>
-          <div class="dropdown mb-3 me-3">
-            <button
-              class="btn btn-primary dropdown-toggle"
-              type="button"
-              data-bs-toggle="dropdown"
-              aria-expanded="false"
-            >
-              Price
-            </button>
-            <div class="dropdown-menu p-3">
-              <h5 class="text-black">Price Range</h5>
-              <div class="price-input">
-                <div class="field">
-                  <input type="number" class="input-min" value="2500" />
-                </div>
-                <div class="separator mx-2">-</div>
-                <div class="field">
-                  <input type="number" class="input-max" value="7500" />
-                </div>
-              </div>
-              <div class="slider">
-                <div class="progress"></div>
-              </div>
-              <div class="range-input">
-                <input
-                  type="range"
-                  class="range-min"
-                  min="0"
-                  max="100000"
-                  value="2500"
-                  step="100"
-                />
-                <input
-                  type="range"
-                  class="range-max"
-                  min="0"
-                  max="100000"
-                  value="7500"
-                  step="100"
-                />
-              </div>
-              <hr />
-              <div class="text-start">
-                <button type="button" class="btn btn-primary">Done</button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-md-3 d-md-flex">
-          <div data-v-2b6f8ec0="" class="">
-            <div data-v-2b6f8ec0="" class="">
-              <input type="text" autocomplete="off" class="" />
-            </div>
-          </div>
-          <div data-v-2b6f8ec0="" class="">
-            <button
-              data-v-2b6f8ec0=""
-              type="button"
-              class=""
-              style="margin-left: 10px"
-            >
-              <span>Send</span>
-            </button>
+          <hr />
+          <div class="text-start">
+            <button type="button" class="btn btn-primary">Done</button>
           </div>
         </div>
       </div>
-
-      <!-- Apartment start  -->
-      <section id="residence">
-        <div class="container-fluid px-md-5">
-          <!-- <h2 class="text-capitalize m-0 py-lg-5">Apartments</h2> -->
-
-          <div class="row">
-            {% for property in property%}
-            <div class="col-md-6 col-lg-4 mb-5">
-              <div class="card position-relative overflow-hidden">
-                <div class="image-wrapper position-relative">
-                  
-                  <a href="{% url 'property_details' property.pk %}">
-                    <img
-                      src="{{ property.main_PropertyImage.url }}" 
-                      class="card-img-top rounded-4"
-                      alt="Luxury apartment with modern kitchen"
-                    />
-                  </a>
-                  <span class="property-label label-left-rent">{{ property.property_type }}</span>
-                  <span class="property-label label-right">{{ property.listing_type }}</span>
-                </div>
-
-                <div class="card-body p-0">
-                  <h3 class="pt-4">
-                    ${{ property.price }}<span class="text-muted fs-5">/{{ property.rent_duration }}</span>
-                  </h3>
-                  <a href="{% url 'property_details' property.pk %}">
-                    <h4 class="card-title">{{ property.property_name }}</h4>
-                  </a>
-                  <p class="card-text">
-                    {{ property.Address }}
-                  </p>
-
-                  <div class="card-text border-top border-2 pt-3">
-                    <ul class="d-flex">
-                      <li class="residence-list pe-2 fw-semibold">
-                        <svg class="text-primary" width="30" height="30">
-                          <use xlink:href="#bed"></use>
-                        </svg>
-                       {{ property.bedrooms }} bed
-                      </li>
-                      <li class="residence-list pe-2 fw-semibold">
-                        <svg class="text-primary" width="30" height="30">
-                          <use xlink:href="#bath"></use>
-                        </svg>
-                       {{ property.bathrooms }} bath
-                      </li>
-                      <li class="residence-list pe-2 fw-semibold">
-                        <svg class="text-primary" width="30" height="30">
-                          <use xlink:href="#area"></use>
-                        </svg>
-                        {{ property.property_size }} Sqft.
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+      <div class="dropdown mb-3 me-3">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Property Type
+        </button>
+        <div class="dropdown-menu p-4">
+          <h5 class="text-black mb-3">Property Type</h5>
+          <div class="checkbox-element">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="propertyTypeApartments"
+              />
+              <label class="form-check-label" for="propertyTypeApartments">
+                Apartments
+              </label>
             </div>
-              {% endfor %}
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="propertyTypeFlats"
+              />
+              <label class="form-check-label" for="propertyTypeFlats">
+                Flats
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="propertyTypeVilla"
+              />
+              <label class="form-check-label" for="propertyTypeVilla">
+                Villas
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="propertyTypeOffice"
+              />
+              <label class="form-check-label" for="propertyTypeOffice">
+                Offices
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                value=""
+                id="propertyTypeBungalow"
+              />
+              <label class="form-check-label" for="propertyTypeBungalow">
+                Bungalows
+              </label>
+            </div>
+          </div>
+          <hr />
+          <div class="text-start">
+            <button type="button" class="btn btn-primary">Done</button>
           </div>
         </div>
-      </section>
-      <!-- Residence Section End-->
-
-      <nav
-        aria-label="Page navigation"
-        class="d-flex justify-content-center pt-4 my-5"
-      >
-        <ul class="pagination">
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Previous">
-              <iconify-icon
-                icon="solar:arrow-left-linear"
-                class="pagination-arrow"
-              ></iconify-icon>
-            </a>
-          </li>
-          <li class="page-item active" aria-current="page">
-            <a class="page-link" href="#">1</a>
-          </li>
-          <li class="page-item"><a class="page-link" href="#">2</a></li>
-          <li class="page-item"><a class="page-link" href="#">3</a></li>
-          <li class="page-item"><a class="page-link" href="#">4</a></li>
-          <li class="page-item"><a class="page-link" href="#">5</a></li>
-          <li class="page-item">
-            <a class="page-link" href="#" aria-label="Next">
-              <iconify-icon
-                icon="solar:arrow-right-linear"
-                class="pagination-arrow"
-              ></iconify-icon>
-            </a>
-          </li>
-        </ul>
-      </nav>
-    </main>
-
-    <section
-      id="start"
-      class="padding-medium"
-      style="
-        background: url(images/background.jpg);
-        background-repeat: no-repeat;
-        background-position: center;
-        height: 360px;
-      "
-    >
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-5 order-md-1 d-flex">
-            <h3
-              class="text-capitalize text-white display-4 fw-semibold lh-1 mb-3"
-            >
-              Let’s simply begin the search.
-            </h3>
+      </div>
+      <div class="dropdown mb-3 me-3">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Rooms
+        </button>
+        <div class="dropdown-menu p-3">
+          <div>
+            <h5 class="text-black mb-3 mt-2">Bed Rooms</h5>
+            <div class="swatch d-flex flex-wrap option-1" data-option-index="1">
+              <div data-value="X" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="any-bedroom"
+                  data-var="x"
+                  type="radio"
+                  name="option-1"
+                  value="X"
+                />
+                <label class="swatch-label square-only" for="any-bedroom"
+                  >Any</label
+                >
+              </div>
+              <div data-value="A" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="one-bedroom"
+                  data-var="a"
+                  type="radio"
+                  name="option-1"
+                  value="A"
+                />
+                <label class="swatch-label square-only" for="one-bedroom"
+                  >1+</label
+                >
+              </div>
+              <div data-value="B" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="two-bedroom"
+                  data-var="b"
+                  type="radio"
+                  name="option-1"
+                  value="B"
+                />
+                <label class="swatch-label square-only" for="two-bedroom"
+                  >2+</label
+                >
+              </div>
+              <div data-value="C" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="three-bedroom"
+                  data-var="c"
+                  type="radio"
+                  name="option-1"
+                  value="C"
+                />
+                <label class="swatch-label square-only" for="three-bedroom"
+                  >3+</label
+                >
+              </div>
+              <div data-value="D" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="four-bedroom"
+                  data-var="d"
+                  type="radio"
+                  name="option-1"
+                  value="D"
+                />
+                <label class="swatch-label square-only" for="four-bedroom"
+                  >4+</label
+                >
+              </div>
+              <div data-value="E" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="five-bedroom"
+                  data-var="e"
+                  type="radio"
+                  name="option-1"
+                  value="E"
+                />
+                <label class="swatch-label square-only" for="five-bedroom"
+                  >5+</label
+                >
+              </div>
+            </div>
           </div>
-          <div class="col-md-7 order-md-2">
-            <div class="text-content ps-md-5 mt-4 mt-md-0">
-              <p class="text-white py-lg-2">
-                Neque, vestibulum sed varius magna et at. Eu, adipiscing morbi
-                augue justo. Nibh laoreet volutpat quis velit. Blandit aliquam
-                donec sed morbi congue eget lorem viverra porta id lobortis.
-              </p>
-              <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-md-2"
-                >Get Started</a
+          <div class="mt-4">
+            <h5 class="text-black mb-3">Bathrooms</h5>
+            <div class="swatch d-flex flex-wrap option-2" data-option-index="1">
+              <div data-value="X" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="any-bathroom"
+                  data-var="x"
+                  type="radio"
+                  name="option-2"
+                  value="X"
+                />
+                <label class="swatch-label square-only" for="any-bathroom"
+                  >Any</label
+                >
+              </div>
+              <div data-value="A" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="one-bathroom"
+                  data-var="a"
+                  type="radio"
+                  name="option-2"
+                  value="A"
+                />
+                <label class="swatch-label square-only" for="one-bathroom"
+                  >1+</label
+                >
+              </div>
+              <div data-value="B" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="two-bathroom"
+                  data-var="b"
+                  type="radio"
+                  name="option-2"
+                  value="B"
+                />
+                <label class="swatch-label square-only" for="two-bathroom"
+                  >2+</label
+                >
+              </div>
+              <div data-value="C" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="three-bathroom"
+                  data-var="c"
+                  type="radio"
+                  name="option-2"
+                  value="C"
+                />
+                <label class="swatch-label square-only" for="three-bathroom"
+                  >3+</label
+                >
+              </div>
+              <div data-value="D" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="four-bathroom"
+                  data-var="d"
+                  type="radio"
+                  name="option-2"
+                  value="D"
+                />
+                <label class="swatch-label square-only" for="four-bathroom"
+                  >4+</label
+                >
+              </div>
+              <div data-value="E" class="swatch-element">
+                <input
+                  class="swatch-input hide"
+                  id="five-bathroom"
+                  data-var="e"
+                  type="radio"
+                  name="option-2"
+                  value="E"
+                />
+                <label class="swatch-label square-only" for="five-bathroom"
+                  >5+</label
+                >
+              </div>
+            </div>
+          </div>
+
+          <hr />
+          <div class="text-start">
+            <button type="button" class="btn btn-primary">Done</button>
+          </div>
+        </div>
+      </div>
+      <div class="dropdown mb-3 me-3">
+        <button
+          class="btn btn-primary dropdown-toggle"
+          type="button"
+          data-bs-toggle="dropdown"
+          aria-expanded="false"
+        >
+          Price
+        </button>
+        <div class="dropdown-menu p-3">
+          <h5 class="text-black">Price Range</h5>
+          <div class="price-input">
+            <div class="field">
+              <input type="number" class="input-min" value="2500" />
+            </div>
+            <div class="separator mx-2">-</div>
+            <div class="field">
+              <input type="number" class="input-max" value="7500" />
+            </div>
+          </div>
+          <div class="slider">
+            <div class="progress"></div>
+          </div>
+          <div class="range-input">
+            <input
+              type="range"
+              class="range-min"
+              min="0"
+              max="100000"
+              value="2500"
+              step="100"
+            />
+            <input
+              type="range"
+              class="range-max"
+              min="0"
+              max="100000"
+              value="7500"
+              step="100"
+            />
+          </div>
+          <hr />
+          <div class="text-start">
+            <button type="button" class="btn btn-primary">Done</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-3 d-md-flex">
+      <div data-v-2b6f8ec0="" class="">
+        <div data-v-2b6f8ec0="" class="">
+          <input type="text" autocomplete="off" class="" />
+        </div>
+      </div>
+      <div data-v-2b6f8ec0="" class="">
+        <button
+          data-v-2b6f8ec0=""
+          type="button"
+          class=""
+          style="margin-left: 10px"
+        >
+          <span>Send</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Apartment start  -->
+  <section id="residence">
+    <div class="container-fluid px-md-5">
+      <!-- <h2 class="text-capitalize m-0 py-lg-5">Apartments</h2> -->
+
+      <div class="row">
+        {% for property in page_obj %}
+        <div class="col-md-6 col-lg-4 mb-5">
+          <div class="card position-relative overflow-hidden">
+            <div class="image-wrapper position-relative">
+              <a href="{% url 'property_details' property.pk %}">
+                <img
+                  src="{% if property.main_PropertyImage %}{{ property.main_PropertyImage.url }}{% else %}{% static 'images/fallback.jpg' %}{% endif %}"
+                  class="card-img-top rounded-4"
+                  alt="Luxury apartment with modern kitchen"
+                />
+              </a>
+              <span class="property-label label-left-rent"
+                >{{ property.property_type }}</span
+              >
+              <span class="property-label label-right"
+                >{{ property.listing_type }}</span
               >
             </div>
+
+            <div class="card-body p-0">
+              <h3 class="pt-4">
+                ${{ property.price }}<span class="text-muted fs-5"
+                  >/{{ property.rent_duration }}</span
+                >
+              </h3>
+              <a href="{% url 'property_details' property.pk %}">
+                <h4 class="card-title">{{ property.property_name }}</h4>
+              </a>
+              <p class="card-text">{{ property.Address }}</p>
+
+              <div class="card-text border-top border-2 pt-3">
+                <ul class="d-flex">
+                  <li class="residence-list pe-2 fw-semibold">
+                    <svg class="text-primary" width="30" height="30">
+                      <use xlink:href="#bed"></use>
+                    </svg>
+                    {{ property.bedrooms }} bed
+                  </li>
+                  <li class="residence-list pe-2 fw-semibold">
+                    <svg class="text-primary" width="30" height="30">
+                      <use xlink:href="#bath"></use>
+                    </svg>
+                    {{ property.bathrooms }} bath
+                  </li>
+                  <li class="residence-list pe-2 fw-semibold">
+                    <svg class="text-primary" width="30" height="30">
+                      <use xlink:href="#area"></use>
+                    </svg>
+                    {{ property.property_size }} Sqft.
+                  </li>
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
+        {% endfor %}
       </div>
-    </section>
+    </div>
+  </section>
+  <!-- Residence Section End-->
+
+  <nav
+    aria-label="Page navigation"
+    class="d-flex justify-content-center pt-4 my-5"
+  >
+    <ul class="pagination">
+      {% if page_obj.has_previous %}
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="?page={{ page_obj.previous_page_number }}"
+          aria-label="Previous"
+        >
+          <iconify-icon
+            icon="solar:arrow-left-linear"
+            class="pagination-arrow"
+          ></iconify-icon>
+        </a>
+      </li>
+      {% endif %}
+      {% for num in page_obj.paginator.page_range %}
+      {% if page_obj.number == num %}
+      <li class="page-item active">
+        <a class="page-link" href="#">{{ num }}</a>
+      </li>
+      {% else %}
+      <li class="page-item">
+        <a class="page-link" href="?page={{ num }}">{{ num }}</a>
+      </li>
+      {% endif %}
+      {% endfor %}
+      {% if page_obj.has_next %}
+      <li class="page-item">
+        <a
+          class="page-link"
+          href="?page={{ page_obj.next_page_number }}"
+          aria-label="Next"
+        >
+          <iconify-icon
+            icon="solar:arrow-right-linear"
+            class="pagination-arrow"
+          ></iconify-icon>
+        </a>
+      </li>
+      {% endif %}
+    </ul>
+  </nav>
+</main>
+
+<section
+  id="start"
+  class="padding-medium"
+  style="
+    background: url(images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 360px;
+  "
+>
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-5 order-md-1 d-flex">
+        <h3 class="text-capitalize text-white display-4 fw-semibold lh-1 mb-3">
+          Let’s simply begin the search.
+        </h3>
+      </div>
+      <div class="col-md-7 order-md-2">
+        <div class="text-content ps-md-5 mt-4 mt-md-0">
+          <p class="text-white py-lg-2">
+            Neque, vestibulum sed varius magna et at. Eu, adipiscing morbi augue
+            justo. Nibh laoreet volutpat quis velit. Blandit aliquam donec sed
+            morbi congue eget lorem viverra porta id lobortis.
+          </p>
+          <a
+            href="{% url 'contact' %}"
+            class="btn btn-primary btn-lg px-4 me-md-2"
+            >Get Started</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 {% include 'include/footer.html' %}
-
 {% endblock %}
