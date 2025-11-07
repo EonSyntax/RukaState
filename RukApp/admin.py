@@ -1,6 +1,5 @@
 from django.contrib import admin
-from .models import Property, Address, PropertyImage
-
+from .models import Property, Address, PropertyImage, ContactMessage
 # Register your models here.
 
 
@@ -23,3 +22,8 @@ class PropertyImageInline(admin.TabularInline):
 @admin.register(Property)
 class PropertyAdmin(admin.ModelAdmin):
     inlines = [PropertyImageInline]
+
+@admin.register(ContactMessage)
+class ContactMessageAdmin(admin.ModelAdmin):
+    list_display = ('name', 'email', 'number', 'subject', 'sent_at')
+    search_fields = ('name', 'email', 'subject')

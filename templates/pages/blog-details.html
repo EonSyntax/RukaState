@@ -8,7 +8,7 @@
       class="navbar navbar-expand-lg bg-dark fixed-top py-4 px-2 p-md-4"
     >
       <div class="container-fluid">
-        <a class="brandlogo" href="./index.html">RUKASTATE</a>
+        <a class="brandlogo" href="{% url 'index' %}">RUKASTATE</a>
 
         <button
           class="navbar-toggler text-white"
@@ -41,10 +41,10 @@
               class="navbar-nav align-items-center justify-content-end align-items-center flex-grow-1"
             >
               <li class="nav-item">
-                <a class="nav-link active me-md-4" href="index.html">Home</a>
+                <a class="nav-link active me-md-4" href="{% url 'index' %}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-md-4" href="About.html">About</a>
+                <a class="nav-link me-md-4" href="{% url 'about' %}">About</a>
               </li>
               <li class="nav-item dropdown">
                 <a
@@ -57,7 +57,7 @@
                 >
                 <ul class="dropdown-menu dropdown-menu-dark">
                   <li>
-                    <a href="properties.html" class="dropdown-item"
+                    <a href="{% url 'properties' %}" class="dropdown-item"
                       >Apartments
                     </a>
                   </li>
@@ -78,10 +78,10 @@
                 </ul>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-md-4" href="contact.html">Contact</a>
+                <a class="nav-link me-md-4" href="{% url 'contact' %}">Contact</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link me-md-4" href="blog.html">Blog</a>
+                <a class="nav-link me-md-4" href="{% url 'blog' %}">Blog</a>
               </li>
 
               <li class="nav-item">
@@ -476,7 +476,7 @@
           <h1 class="text-capitalize lh-1 mb-3">
             How to make your villa look outstanding?
           </h1>
-          <span class="item"><a href="index.html">Home</a></span> &nbsp; /
+          <span class="item"><a href="{% url 'index' %}">Home</a></span> &nbsp; /
           &nbsp; <span class="item">Blog-Details</span>
         </div>
       </div>
@@ -692,7 +692,7 @@
                 augue justo. Nibh laoreet volutpat quis velit. Blandit aliquam
                 donec sed morbi congue eget lorem viverra porta id lobortis.
               </p>
-              <a href="contact.html" class="btn btn-primary btn-lg px-4 me-md-2"
+              <a href="{% url 'contact' %}" class="btn btn-primary btn-lg px-4 me-md-2"
                 >Get Started</a
               >
             </div>
