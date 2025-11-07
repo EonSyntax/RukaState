@@ -1,5 +1,7 @@
-{% extends 'base.html' %} {% block content %} {% load static %} {% include
-'include/navbar.html' %}
+{% extends 'base.html' %} 
+{% block content %} 
+{% load static %} 
+{% include 'include/navbar.html' %}
 
 <section id="page-billboard">
   <div class="container padding-medium-2">
@@ -12,8 +14,8 @@
 </section>
 
 <main class="main-content">
-  <div class="row align-items-center pb-5 ps-md-5">
-    <div class="col-md-9 d-md-flex">
+  <div class="row align-items-center pb-3 ps-md-5 ps-2 pe-2 filter-bar">
+    <div class="col-md-9 d-flex flex-nowrap overflow-auto gap-2">
       <div class="dropdown mb-3 me-3">
         <button
           class="btn btn-primary dropdown-toggle"
@@ -406,11 +408,13 @@
             </div>
 
             <div class="card-body p-0">
+              {% load humanize %}
               <h3 class="pt-4">
-                ${{ property.price }}<span class="text-muted fs-5"
-                  >/{{ property.rent_duration }}</span
-                >
-              </h3>
+    ${{ property.price|floatformat|intcomma }}
+    {% if property.rent_duration %}
+        <span class="text-muted fs-5">/{{ property.rent_duration }}</span>
+    {% endif %}
+</h3>
               <a href="{% url 'property_details' property.pk %}">
                 <h4 class="card-title">{{ property.property_name }}</h4>
               </a>
